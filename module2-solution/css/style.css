@@ -1,1 +1,64 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
 
+h1 {
+    margin: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    background-color: lightgray;
+}
+
+/* Section Title */
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: orange;
+    padding: 5px 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .box {
+        width: 32%;
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        width: 48%;
+    }
+
+    .box3 {
+        width: 100%;
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .box {
+        width: 100%;
+    }
+}
