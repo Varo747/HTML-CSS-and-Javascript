@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food, LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body id="top">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#navbar-collapse"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Food, LLC</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href="#chicken">Chicken</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#beef">Beef</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#sushi">Sushi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div id="chicken" class="col-md-4 col-sm-6 col-xs-12">
+                <div class="content-box">
+                    <div class="title">Chicken</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <a href="#top" class="back-to-top hidden-sm hidden-md hidden-lg">Back to Top</a>
+                    </p>
+                </div>
+            </div>
+            <div id="beef" class="col-md-4 col-sm-6 col-xs-12">
+                <div class="content-box">
+                    <div class="title">Beef</div>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <a href="#top" class="back-to-top hidden-sm hidden-md hidden-lg">Back to Top</a>
+                    </p>
+                </div>
+            </div>
+            <div id="sushi" class="col-md-4 col-sm-12 col-xs-12">
+                <div class="content-box">
+                    <div class="title">Sushi</div>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <a href="#top" class="back-to-top hidden-sm hidden-md hidden-lg">Back to Top</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+        $('#menu-toggle').on('click', function(e){
+            e.preventDefault();
+            $('#mobile-menu').slideToggle(200);
+        });
+        $(document).on('click', function(e){
+            if (!$(e.target).closest('#menu-toggle, #mobile-menu').length) {
+                $('#mobile-menu').slideUp(200);
+            }
+        });
+        $('#mobile-menu li a').on('click', function(){
+            $('#mobile-menu').slideUp(200);
+        });
+    });
+    </script>
+</body>
+</html>
